@@ -4,6 +4,7 @@
     initHamburger();
     initSitePanel();
     initSlideShow();
+    initTwitterFeed();
   });
 
   function initHamburger()
@@ -102,5 +103,29 @@
     $('.simple-slideshow').simpleSlideshow();
   };
 
-    
+    function initTwitterFeed()
+    {
+      var feedJson = $.parseJSON($('#twitterFeed').text());
+      var counter = 0;
+      console.log(feedJson[counter]);
+      $('.article-tweet').each(function(){
+        $this = $(this);
+        var tweet = feedJson[counter].text.replace(/(http:[^\s]+)/, '<a href="$1">$1</a>')
+                .replace(/@([^\s:]+)/, '<a href="http://twitter.com/$1">@$1</a>');
+        var screenName = feedJson[counter].user.screen_name;
+        var idString = feedJson[counter].id_str;
+        var twitterDetails = $this.find('.twitter-details').attr("href", "http://twitter.com/" + screenName);
+
+        $this.find('p').html(tweet);
+        twitterDetails.find('img').attr({"src": feedJson[counter].user.profile_image_url, "alt": screenName});
+        twitterDetails.find('h2').text(feedJson[counter].user.name);
+        twitterDetails.find('h3').text("@" + screenName);
+        $this.find('time').html($('<a>').attr("src", "http://twitter.com/" + screenName + "/status/" + idString).text(feedJson[counter].created_at));
+        $this.find('.tweet-intents .reply').attr("href", "https://twitter.com/intent/tweet?in_reply_to=" + idString);
+        $this.find('.tweet-intents .retweet').attr("href", "https://twitter.com/intent/retweet?tweet_id=" + idString);
+        $this.find('.tweet-intents .favorite').attr("href", "https://twitter.com/intent/favorite?tweet_id=" + idString);
+        counter++;
+      });
+    };
+
 })(jQuery);
