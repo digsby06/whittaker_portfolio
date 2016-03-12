@@ -812,8 +812,9 @@ a:hover {
 /* line 123, ../sass/components/_article-grid.scss */
 .article-grid {
   max-width: 2000px;
+  padding-top: 60px;
   padding-left: 85px;
-  font-family: "Lato", sans-serif;
+  font-family: "Open-Sans", sans-serif;
   font-weight: 700;
 }
 @media (max-width: 767px) {
@@ -1872,8 +1873,9 @@ a:hover {
 }
 /* line 788, ../sass/components/_article-grid.scss */
 .article-grid .article-what-i-do h2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.9rem;
+  font-family: BebasNeue, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 5px;
   color: #fff;
   text-transform: uppercase;
   opacity: 1;
@@ -1899,8 +1901,8 @@ a:hover {
 }
 /* line 813, ../sass/components/_article-grid.scss */
 .article-grid p {
-  font-family: "Lato", sans-serif;
-  font-size: 1.4rem;
+  font-family: "Open-Sans", sans-serif;
+  font-size: 2rem;
   color: #fff;
 }
 /* line 818, ../sass/components/_article-grid.scss */

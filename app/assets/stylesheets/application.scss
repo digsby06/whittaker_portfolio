@@ -44,7 +44,6 @@
     overflow: hidden;
 }
 
-
 .ba-slider .handle { /* Thin line seperator */
   position:absolute; 
   left:95%;
@@ -267,6 +266,385 @@ a:focus {
 	font-family: BebasNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+//********************* Portfolio Area
+
+a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display:block;
+}
+
+span {
+  display:block;
+}
+
+::-moz-selection { 
+  background-color: #BA9EB0; 
+  color: #ffffff;
+}
+
+input:foucs {border: none !important}
+
+::-moz-selection {
+  background-color: #BA9EB0;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #BA9EB0;
+  color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:focus, textarea:focus {
+    outline:none !important;
+}
+
+a:hover { 
+    text-decoration: none 
+}
+a:focus { 
+    outline: 0 solid 
+}
+
+.fix { 
+    overflow: hidden 
+}
+
+ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+
+.portfolios-area {
+  padding-top:80px;
+  padding-bottom:0;
+}
+.single-portfolio.mix {
+  display:none;
+}
+
+ul.filters-tab {
+    text-align: center;
+  margin-bottom:30px;
+}
+
+ul.filters-tab li {
+  color: #777;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Montserrat",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+}
+
+ul.filters-tab li.active , ul.filters-tab li:hover {
+  background:#CB2027;
+  color:#fff;
+}
+
+.single-portfolio {
+    float: left;
+    width: 33%;
+  overflow:hidden;
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+}
+
+.image {
+    position: relative;
+}
+
+.portfolio-hover {
+  bottom: 0;
+  height: 0%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.3s linear 0s;
+          transition: all 0.3s linear 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.portfolio-hover:after {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    z-index: -1;
+  -webkit-transition: all .30s linear 0s;
+          transition: all .30s linear 0s;
+}
+
+
+.hover-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.hover-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.hover-tablecell a {
+    background: #CB2027 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 25px;
+    text-align: center;
+    width: 50px;
+  visibility:hidden;
+}
+
+.single-portfolio:hover .portfolio-hover{
+  height:100%;
+}
+
+.single-portfolio:hover .hover-tablecell a{
+  visibility:visible;
+}
+
+.single-portfolio:hover  .single-portfolio img{
+  -webkit-transform:scale(1.2);
+      -ms-transform:scale(1.2);
+          transform:scale(1.2);
+}
+
+.single-portfolio .image > a img {
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+}
+
+.single-portfolio:hover .image > a img {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+
+//********************* Lightbox
+.nivo-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nivo-lightbox-overlay.nivo-lightbox-open {
+    visibility: visible;
+    opacity: 1;
+}
+.nivo-lightbox-wrap  {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+.nivo-lightbox-content {
+    width: 100%;
+    height: 100%;
+}
+.nivo-lightbox-title-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    text-align: center;
+}
+.nivo-lightbox-nav { display: none; }
+.nivo-lightbox-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.nivo-lightbox-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.nivo-lightbox-close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.nivo-lightbox-image { text-align: center; }
+.nivo-lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+.nivo-lightbox-content iframe {
+    width: 100%;
+    height: 100%;
+}
+.nivo-lightbox-inline,
+.nivo-lightbox-ajax {
+    max-height: 100%;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* https://bugzilla.mozilla.org/show_bug.cgi?id=308801 */
+}
+.nivo-lightbox-error {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+}
+.nivo-lightbox-error p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Effects
+ **********************************************/
+.nivo-lightbox-notouch .nivo-lightbox-effect-fade,
+.nivo-lightbox-notouch .nivo-lightbox-effect-fadeScale,
+.nivo-lightbox-notouch .nivo-lightbox-effect-slideLeft,
+.nivo-lightbox-notouch .nivo-lightbox-effect-slideRight,
+.nivo-lightbox-notouch .nivo-lightbox-effect-slideUp,
+.nivo-lightbox-notouch .nivo-lightbox-effect-slideDown,
+.nivo-lightbox-notouch .nivo-lightbox-effect-fall {
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+/* fadeScale */
+.nivo-lightbox-effect-fadeScale .nivo-lightbox-wrap {
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+}
+.nivo-lightbox-effect-fadeScale.nivo-lightbox-open .nivo-lightbox-wrap {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+/* slideLeft / slideRight / slideUp / slideDown */
+.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideUp .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+       -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+        -ms-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+         -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+            transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap {
+    -webkit-transform: translateX(-10%);
+       -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+            transform: translateX(-10%);
+}
+.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap {
+    -webkit-transform: translateX(10%);
+       -moz-transform: translateX(10%);
+        -ms-transform: translateX(10%);
+            transform: translateX(10%);
+}
+.nivo-lightbox-effect-slideLeft.nivo-lightbox-open .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideRight.nivo-lightbox-open .nivo-lightbox-wrap {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+}
+.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+    -webkit-transform: translateY(-10%);
+       -moz-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+            transform: translateY(-10%);
+}
+.nivo-lightbox-effect-slideUp .nivo-lightbox-wrap {
+    -webkit-transform: translateY(10%);
+       -moz-transform: translateY(10%);
+        -ms-transform: translateY(10%);
+            transform: translateY(10%);
+}
+.nivo-lightbox-effect-slideUp.nivo-lightbox-open .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideDown.nivo-lightbox-open .nivo-lightbox-wrap {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* fall */
+.nivo-lightbox-body-effect-fall .nivo-lightbox-effect-fall {
+    -webkit-perspective: 1000px;
+       -moz-perspective: 1000px;
+            perspective: 1000px;
+}
+.nivo-lightbox-effect-fall .nivo-lightbox-wrap {
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+    -webkit-transform: translateZ(300px);
+       -moz-transform: translateZ(300px);
+        -ms-transform: translateZ(300px);
+            transform: translateZ(300px);
+}
+.nivo-lightbox-effect-fall.nivo-lightbox-open .nivo-lightbox-wrap {
+    -webkit-transform: translateZ(0);
+       -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+//********************* Intro Area
+
 @media(min-width:768px) {
     .intro {
         height: 100%;
@@ -396,6 +774,7 @@ a:focus {
         margin-top: 250px;
     }
 }
+
 
 .btn {
     border-radius: 0;

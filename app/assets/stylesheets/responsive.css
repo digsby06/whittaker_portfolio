@@ -1,0 +1,221 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+ul.nav.navbar-nav li a {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.is-sticky ul.nav.navbar-nav li a {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.slide-text h2 {
+    font-size: 40px;
+}
+
+.service-icon {
+	margin-bottom: 120px;
+}
+
+.team-hover-tablecell a {
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+    font-size: 12px;
+}
+
+.sometext-aboutus p {
+  line-height: 1.3em;
+}
+
+
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+ 
+.logo {
+  text-align: center;
+}
+
+.is-sticky .logo h1 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+ul.nav.navbar-nav {
+  text-align: center;
+}
+.is-sticky ul.nav.navbar-nav li a, ul.nav.navbar-nav li a {
+  font-size: 16px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.slide-text h2 {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.column-title {
+    font-size: 20px;
+}
+
+.sub-title {
+    font-size: 11px;
+}
+
+.content-column p {
+    font-size: 14px;
+}
+
+.team-thumb img {
+    width: 100%;
+}
+
+.single-team-member {
+    margin-bottom: 40px;
+}
+
+.counter-text {
+    font-size: 50px;
+}
+
+.facts-count-area .column {
+    padding: 20px 0;
+}
+
+.facts-count-area .line {
+    margin: 20px auto;
+}
+
+.single-social-column {
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.sometext-aboutus {
+  margin-bottom: 50px;
+}
+
+.single-contact-info {
+  margin-bottom: 70px;
+}
+
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+.logo {
+    text-align: center;
+}
+
+button.navbar-toggle {
+    border: 1px solid #11c3f0;
+    margin: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background: #11c3f0 none repeat scroll 0 0;
+}
+
+ul.nav.navbar-nav {
+    background: #000 none repeat scroll 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul.nav.navbar-nav li {
+    display: block;
+    float: none;
+}
+
+ul.nav.navbar-nav li a {
+    display: block;
+    padding: 15px 0;
+}
+
+.slide-text h2 {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 41px;
+}
+
+.slide-text p {
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.is-sticky .navbar-header {
+  padding-bottom: 20px;
+}
+
+.single-service {
+  font-size: 14px;
+}
+
+.two-col-bg .content-column {
+  padding: 30px 0;
+  width: 100%;
+}
+.column-title {
+  font-size: 18px;
+}
+
+.sub-title {
+  font-size: 10px;
+}
+
+.content-column p {
+  font-size: 14px;
+}
+.image-column {
+	display: none;
+}
+.team-thumb img {
+	width: 100%;
+}
+
+ul.filters-tab li {
+  display: block;
+  font-size: 12px;
+}
+
+.single-portfolio {
+  width: 100%;
+}
+
+.single-social-column {
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+.clients-tesimonials-area {
+  height: 555px;
+}
+
+.single-contact-info {
+  margin-bottom: 80px;
+}
+
+
+
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+.is-sticky .navbar-header, .navbar-header {
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+.slide-text h2 {
+	font-size: 20px;
+}
+
+.slide-text p {
+  font-size: 18px;
+}
+
+}
